@@ -23,6 +23,7 @@ export const Content = styled.div`
   .sub-header {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
     margin: 40px 0;
 
@@ -39,8 +40,8 @@ export const Content = styled.div`
   }
 
   .markup {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     background-color: rgba(13, 12, 15, 1);
     padding: 15px;
     margin: 24px 0 40px;

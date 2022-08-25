@@ -26,6 +26,17 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-thumb:hover {
       background-color: #ffa1b3;
     }
+
+
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+  -moz-appearance: textfield;
   }
 
   body {

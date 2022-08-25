@@ -1,33 +1,53 @@
 import styled from 'styled-components'
 
-export const Container = styled.button`
+export const Container = styled.div`
   margin: 20px 8px;
+  input {
+    background-color: ${({ theme, isNew }) =>
+      isNew ? 'transparent' : theme.COLORS.BACKGROUND_800};
 
-  background-color: ${({ theme, isNew }) =>
-    isNew ? 'transparent' : theme.COLORS.BACKGROUND_800};
+    border: ${({ theme, isNew }) =>
+      isNew ? `${theme.COLORS.BACKGROUND_700} 2px dashed` : 'none'};
 
-  border: ${({ theme, isNew }) =>
-    isNew ? `${theme.COLORS.BACKGROUND_700} 2px dashed` : 'none'};
+    border-right: none;
 
-  color: ${({ theme, isNew }) =>
-    isNew ? theme.COLORS.GRAY_1 : theme.COLORS.WHITE};
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0px;
 
-  &:hover {
     color: ${({ theme, isNew }) =>
-      isNew ? theme.COLORS.WHITE : theme.COLORS.WHITE};
+      isNew ? theme.COLORS.GRAY_1 : theme.COLORS.WHITE};
+
+    padding: 15px;
+    padding-right: 0;
+    font-size: 16px;
   }
 
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
+  button {
+    padding: 15px;
+    font-size: 16px;
 
-  border-radius: 8px;
+    background-color: ${({ theme, isNew }) =>
+      isNew ? 'transparent' : theme.COLORS.BACKGROUND_800};
+    border: none;
 
-  font-size: 16px;
+    border: ${({ theme, isNew }) =>
+      isNew ? `${theme.COLORS.BACKGROUND_700} 2px dashed` : 'none'};
 
-  > svg {
-    color: ${({ theme }) => theme.COLORS.PINK};
+    border-left: none;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+
+    &:hover {
+      filter: none;
+    }
+
+    > svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
   }
 `
