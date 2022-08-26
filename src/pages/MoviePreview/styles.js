@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
   }
 `
 
@@ -25,13 +25,20 @@ export const Content = styled.div`
   .sub-header {
     .btn {
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       margin: 10px 0;
+      button {
+        background: transparent;
+        border: none;
+        color: ${({ theme }) => theme.COLORS.PINK};
+        font-size: 16px;
+
+        &:hover {
+          color: white;
+        }
+      }
     }
 
-    > button {
-      margin: 40px 0 24px;
-    }
     text-align: left;
     margin-bottom: 24px;
 
@@ -63,7 +70,7 @@ export const Content = styled.div`
     .author {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 15px;
       img {
         width: 20px;
         height: 20px;
@@ -72,7 +79,7 @@ export const Content = styled.div`
 
       span {
         line-height: 18.75px;
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 400;
         text-align: justify;
       }
@@ -86,9 +93,13 @@ export const Content = styled.div`
         }
       }
     }
-
-    .anothertag {
-      background-color: ${({ theme }) => theme.COLORS.PINK_2};
+    .tags {
+      span {
+        font-size: 14px;
+        padding: 10px 15px;
+        background-color: #282124;
+        color: #e5e5e5;
+      }
     }
   }
 

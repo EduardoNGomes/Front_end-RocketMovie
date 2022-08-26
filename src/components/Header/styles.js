@@ -30,7 +30,6 @@ export const Container = styled.header`
     justify-items: center;
 
     .text {
-      width: 105px;
       display: flex;
       flex-direction: column;
     }
